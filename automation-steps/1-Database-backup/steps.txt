@@ -1,0 +1,8 @@
+Secret setup
+PVC for creating disk for SQL backup
+
+Job#1 - Run <Create> SQL Backup
+
+Job#2 - Run Disk Backup of that PVC #1
+
+Verify Job#3 - new ?
