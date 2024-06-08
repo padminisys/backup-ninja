@@ -1,0 +1,34 @@
+###input 
+
+database connection details in k8s
+
+-host with k8s DNS name with namespace
+-port
+
+
+WP User Details - This user will be created on new External DB during restore.
+-username
+-password
+-database
+
+Root Details -This user will be used to create backup processing for logging to act on backup/restore.
+-username
+-password
+
+PVC details in K8S for wordpress disk - external claim
+-PVC name
+-Namespace
+
+----------------------------------------------------------------------
+
+Restore Output
+
+helm setup is manual - install your wordpress chart with following available after restore is done.
+
+- Database created to use in external database
+- Restore executed
+- Setup wordpress user on new database with appropriate access grants
+
+create new PVC that can be ready to use as existing claim
+
+- New PVC restored from S3 latest snapshot of restic
